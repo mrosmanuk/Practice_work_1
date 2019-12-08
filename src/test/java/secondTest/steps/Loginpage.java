@@ -1,7 +1,7 @@
 package secondTest.steps;
 
 import cucumber.api.java.en.Given;
-import secondTest.Helpers.Helper;
+import secondTest.helpers.Helper;
 import secondTest.model.User;
 import secondTest.runners.Common;
 import java.awt.*;

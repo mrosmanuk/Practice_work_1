@@ -19,5 +19,6 @@ dependencies {
     testCompile 'io.cucumber:cucumber-jvm:4.4.0'
     testCompile 'io.cucumber:cucumber-java:4.4.0'
     testCompile 'com.codeborne:selenide:5.5.0'
-    testCompile group: 'org.testng', name: 'testng', version: '7.0.0'
+    compile group: 'org.testng', name: 'testng', version: '7.0.0'
+    compile group: 'ru.yandex.qatools.ashot', name: 'ashot', version: '1.5.3'
 }

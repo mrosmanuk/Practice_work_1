@@ -8,18 +8,19 @@ import secondTest.runners.Common;
 
 public class Mainpage extends Common {
     private By response = By.xpath("//pre");
-    private String websiteRespnse;
+    private String websiteResponse;
 
     public String getWebsiteRespnse() {
-        return websiteRespnse;
+        return websiteResponse;
     }
 
     public void setWebsiteRespnse(String websiteRespnse) {
-        this.websiteRespnse = websiteRespnse;
+        this.websiteResponse = websiteRespnse;
     }
 
     @Then("^I get (.*) response$")
-    public void responseAssert(String expectedResponse){
+    public void responseAssert(String expectedResponse) throws InterruptedException {
+        Thread.sleep(2000);
         setWebsiteRespnse(driver.findElement(response).getText().split("[${}]+")[1]);
         System.out.println(getWebsiteRespnse());
         Assert.assertEquals(expectedResponse,getWebsiteRespnse());
