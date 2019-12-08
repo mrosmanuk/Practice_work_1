@@ -4,6 +4,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import thirdTest.helper.Helper;
+import thirdTest.model.Screenshot;
 import thirdTest.runners.Common;
 
 import java.io.IOException;
@@ -17,8 +18,10 @@ public class Homepage extends Common {
         driver.get(website);
     }
 
-    @Then("I verify that main image matches \"test.jpeg\" image")
-    public void compareScreenshots() throws IOException {
+    @Then("^I verify that main image matches (.*) image with (.*)% threshold$")
+    public void compareScreenshots(String imageName, int ratio) throws IOException {
+    Screenshot.setImageName(imageName);
+    Screenshot.setRatio(ratio);
     helper.takeScreenshotAndCompare();
     }
 

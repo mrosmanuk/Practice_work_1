@@ -9,7 +9,7 @@ import java.awt.*;
 public class Loginpage extends Common {
     Helper helper = new Helper();
 
-    @Given("^I authenticate at (.*) using username (.*) and password (.*)$")
+    @Given("^I authenticate at (.*) using username: (.*) and password: (.*)$")
     public void navigateAndLogin(String website, String userName, String userPassword) throws InterruptedException, AWTException {
         User.setUserName(userName);
         User.setUserPassword(userPassword);
