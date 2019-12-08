@@ -25,13 +25,13 @@ public class Helper extends Common {
 
         WebElement logo = driver.findElement(logoElement);
         Screenshot screenshot = new AShot().coordsProvider(new WebDriverCoordsProvider()).takeScreenshot(driver,logo);
-        File actualFile = new File("src/test/resources/thirdTest/screenshot.png");
-        ImageIO.write(screenshot.getImage(), "png", actualFile);
+        File actualFile = new File("src/test/resources/thirdTest/screenshot.jpeg");
+        ImageIO.write(screenshot.getImage(), "jpeg", actualFile);
         scr.setScreenshotHeight(screenshot.getImage().getHeight());
         scr.setScreenshotWidth(screenshot.getImage().getWidth());
         scr.setScreenshotPixels(scr.getScreenshotHeight()*scr.getScreenshotWidth());
 
-        Screenshot expectedScreenshot = new Screenshot (ImageIO.read(new File("src/test/resources/thirdTest/test.png")));
+        Screenshot expectedScreenshot = new Screenshot (ImageIO.read(new File("src/test/resources/thirdTest/test.jpeg")));
         scr.setExpectedScreenshotHeight(expectedScreenshot.getImage().getHeight());
         scr.setExpectedScreenshotWidth(expectedScreenshot.getImage().getWidth());
         scr.setExpectedScreenshotPixels(scr.getExpectedScreenshotHeight()*scr.getExpectedScreenshotWidth());
