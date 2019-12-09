@@ -16,7 +16,7 @@ import static org.junit.Assert.assertThat;
 
 public class Helper extends Common {
     thirdTest.model.Screenshot scr = new thirdTest.model.Screenshot();
-    private By logoElement = By.xpath("//img[@alt='Google']");
+    private By logoElement = By.xpath("//div[contains(@id,'hplogo')]");
 
     public void takeScreenshotAndCompare() throws IOException {
         WebElement logo = driver.findElement(logoElement);
