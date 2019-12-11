@@ -2,7 +2,6 @@ package model;
 
 public class ScreenshotT3 {
     public static int screenshotPixels;
-    public static int expectedScreenshotPixels;
     public static String imageName;
     public static int ratio;
 
@@ -12,10 +11,6 @@ public class ScreenshotT3 {
 
     public static void setImageName(String imageName) {
         ScreenshotT3.imageName = imageName;
-    }
-
-    public int getExpectedScreenshotPixels() {
-        return expectedScreenshotPixels;
     }
 
     public static void setRatio(int ratio) {
@@ -32,9 +27,5 @@ public class ScreenshotT3 {
 
     public static int getRatio() {
         return ratio;
-    }
-
-    public void setExpectedScreenshotPixels(int expectedScreenshotPixels) {
-        ScreenshotT3.expectedScreenshotPixels = expectedScreenshotPixels;
     }
 }

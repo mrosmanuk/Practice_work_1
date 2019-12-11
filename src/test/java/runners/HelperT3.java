@@ -27,7 +27,6 @@ public class HelperT3 extends CommonT3 {
         scr.setScreenshotPixels(screenshot.getImage().getHeight() * screenshot.getImage().getWidth());
 
         Screenshot expectedScreenshot = new Screenshot(ImageIO.read(new File("src/test/resources/" + ScreenshotT3.getImageName())));
-        scr.setExpectedScreenshotPixels(expectedScreenshot.getImage().getHeight() * expectedScreenshot.getImage().getWidth());
         ImageDiff diff = new ImageDiffer().makeDiff(expectedScreenshot, screenshot);
         assertThat(diff.withDiffSizeTrigger(scr.getScreenshotPixels() / 100 * ScreenshotT3.getRatio()).hasDiff(), is(false));
     }
