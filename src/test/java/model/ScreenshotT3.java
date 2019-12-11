@@ -1,6 +1,6 @@
-package thirdTest.model;
+package model;
 
-public class Screenshot {
+public class ScreenshotT3 {
     public static int screenshotPixels;
     public static int expectedScreenshotPixels;
     public static String imageName;
@@ -10,31 +10,31 @@ public class Screenshot {
         return screenshotPixels;
     }
 
-    public void setScreenshotPixels(int screenshotPixels) {
-        Screenshot.screenshotPixels = screenshotPixels;
+    public static void setImageName(String imageName) {
+        ScreenshotT3.imageName = imageName;
     }
 
     public int getExpectedScreenshotPixels() {
         return expectedScreenshotPixels;
     }
 
-    public void setExpectedScreenshotPixels(int expectedScreenshotPixels) {
-        Screenshot.expectedScreenshotPixels = expectedScreenshotPixels;
+    public static void setRatio(int ratio) {
+        ScreenshotT3.ratio = ratio;
     }
 
     public static String getImageName() {
         return imageName;
     }
 
-    public static void setImageName(String imageName) {
-        Screenshot.imageName = imageName;
+    public void setScreenshotPixels(int screenshotPixels) {
+        ScreenshotT3.screenshotPixels = screenshotPixels;
     }
 
     public static int getRatio() {
         return ratio;
     }
 
-    public static void setRatio(int ratio) {
-        Screenshot.ratio = ratio;
+    public void setExpectedScreenshotPixels(int expectedScreenshotPixels) {
+        ScreenshotT3.expectedScreenshotPixels = expectedScreenshotPixels;
     }
 }

@@ -1,6 +1,6 @@
-package secondTest.model;
+package model;
 
-public class User {
+public class UserT2 {
     private static String userName;
     private static String userPassword;
 
@@ -9,7 +9,7 @@ public class User {
     }
 
     public static void setUserName(String userName) {
-        User.userName = userName;
+        UserT2.userName = userName;
     }
 
     public static String getUserPassword() {
@@ -17,6 +17,6 @@ public class User {
     }
 
     public static void setUserPassword(String userPassword) {
-        User.userPassword = userPassword;
+        UserT2.userPassword = userPassword;
     }
 }

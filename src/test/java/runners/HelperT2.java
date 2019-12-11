@@ -1,17 +1,17 @@
-package secondTest.helpers;
+package runners;
 
-import secondTest.model.User;
+import model.UserT2;
 
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.KeyEvent;
 
-public class Helper {
+public class HelperT2 {
 
     public void robotName() throws InterruptedException, AWTException {
         Robot robotName = new Robot();
-        StringSelection selectName = new StringSelection(User.getUserName());
+        StringSelection selectName = new StringSelection(UserT2.getUserName());
         Clipboard clipboard1 = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard1.setContents(selectName, selectName);
 
@@ -24,7 +24,7 @@ public class Helper {
 
     public void robotPassword() throws InterruptedException, AWTException{
         Robot robotPassword = new Robot();
-        StringSelection selectPassword = new StringSelection(User.getUserPassword());
+        StringSelection selectPassword = new StringSelection(UserT2.getUserPassword());
         Clipboard clipboard2 = Toolkit.getDefaultToolkit().getSystemClipboard();
         clipboard2.setContents(selectPassword, selectPassword);
 
